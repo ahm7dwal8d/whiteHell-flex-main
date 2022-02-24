@@ -24,9 +24,6 @@ body {
     background-color: var(--Body-Background);
     font-family: 'DM Sans', sans-serif;
 }
-body.dark-thems a {
-    color: white;
-}
 html {
     scroll-behavior: smooth;
 }
@@ -317,20 +314,29 @@ i:hover {
 .header .container ul {
     display: flex;
     z-index: 20;
+    transition: all 0.4s linear;
+    -webkit-transition: all 0.4s linear;
+    -moz-transition: all 0.4s linear;
+    -ms-transition: all 0.4s linear;
+    -o-transition: all 0.4s linear;
 }
 .header .container ul.active {
     display: flex;
     flex-direction: column;
     position: absolute;
-    top: 30px;
     left: 0;
-    padding: 0;
+    top: 34px;
     width: 100%;
-    background-color: #eee;
+    z-index: 9999;
+    background-color: white;
+    transition: all 0.4s linear;
+    -webkit-transition: all 0.4s linear;
+    -moz-transition: all 0.4s linear;
+    -ms-transition: all 0.4s linear;
+    -o-transition: all 0.4s linear;
 }
-.header .container.active ul.active li a {
+.header .container ul.active a {
     display: block;
-    color: white;
 }
 @media (max-width: 1200px) {
     .header .container ul {
@@ -369,17 +375,26 @@ i:hover {
 }
 .header .container .icons {
     border: 1px solid #eee;
+    transition: all 0.4s linear;
+    -webkit-transition: all 0.4s linear;
+    -moz-transition: all 0.4s linear;
+    -ms-transition: all 0.4s linear;
+    -o-transition: all 0.4s linear;
+}
+.header .container .icons.active {
+    display: flex;
+    position: absolute;
+    right: 147px;
+    transition: all 0.4s linear;
+    -webkit-transition: all 0.4s linear;
+    -moz-transition: all 0.4s linear;
+    -ms-transition: all 0.4s linear;
+    -o-transition: all 0.4s linear;
 }
 @media (max-width: 1200px) {
     .header .container .icons {
         display: none;
     }
-}
-.header .container .icons.active {
-    display: flex;
-    position: absolute;
-    right: calc(100% - 563px);
-
 }
 .header .container .icons i {
     padding: 10px;
@@ -1014,10 +1029,10 @@ i:hover {
     opacity: 1;
     height: 100%;
     transition: var(--Main-Transition);
-    -webkit-transition:;
-    -moz-transition:;
-    -ms-transition:;
-    -o-transition:;
+    -webkit-transition: var(--Main-Transition);
+    -moz-transition: var(--Main-Transition);
+    -ms-transition: var(--Main-Transition);
+    -o-transition: var(--Main-Transition);
 }
 .gover .container .box img {
     width: 100%;
@@ -1036,10 +1051,10 @@ i:hover {
     height: 50%;
     opacity: 1;
     transition: 0.3s linear;
-    -webkit-transition:;
-    -moz-transition:;
-    -ms-transition:;
-    -o-transition:;
+    -webkit-transition: 0.3s linear;
+    -moz-transition: 0.3s linear;
+    -ms-transition: 0.3s linear;
+    -o-transition: 0.3s linear;
 }
 .gover .container .box .info .border {
     position: relative;
@@ -1090,10 +1105,10 @@ i:hover {
     background-color: var(--Hover-Color);
     color: white;
     transition: var(--Main-Transition);
-    -webkit-transition:;
-    -moz-transition:;
-    -ms-transition:;
-    -o-transition:;
+    -webkit-transition: var(--Main-Transition);
+    -moz-transition: var(--Main-Transition);
+    -ms-transition: var(--Main-Transition);
+    -o-transition: var(--Main-Transition);
 }
 .gover .container .box .info .icons i:first-of-type {
     margin-right: 15px;
@@ -1114,7 +1129,7 @@ i:hover {
     -ms-border-radius: 6px;
     -o-border-radius: 6px;
 }
-.gover .container .box.active .text {
+.gover .container .box:hover .text {
     opacity: 0;
     transition: var(--Main-Transition);
     -webkit-transition: var(--Main-Transition);
@@ -2778,6 +2793,26 @@ i:hover {
     transition: var(--Main-Transition);
 }
 /* End Footer  */
+#to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 25px;
+    background-color: red;
+    border: none;
+    color: white;
+    padding: 6px;
+    text-transform: uppercase;
+    font-size: 25px;
+    border-radius: 4px;
+    opacity: 0;
+    cursor: pointer;
+    transition: all 0.4s linear;
+    -webkit-transition: all 0.4s linear;
+    -moz-transition: all 0.4s linear;
+    -ms-transition: all 0.4s linear;
+    -o-transition: all 0.4s linear;
+    z-index: 9999;
+}
 
 /* Start Animation */
 @keyframes SunRotate {
